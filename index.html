@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint.Js</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./script.js"></script>
+</head>
+<body>
+    <h1>
+        <img src="./assets/icon.png" alt="paint icon" />
+        Paint.Js
+    </h1>
+
+    <div id="container">
+        <header>
+            <button>Files</button>
+            <button>Edit</button>
+            <button>View</button>
+            <button>Image</button>
+            <button>Option</button>
+            <button>Help</button>
+        </header>
+
+        <aside>
+            <nav class="selection-mode">
+                <button id="draw-btn" title="pincel" ></button>
+                <button id="erase-btn" title="borrar" ></button>
+                <button id="rectangle-btn" title="retangulo" ></button>
+                <button id="ellipse-btn" title="elipse" ></button>
+                <button disabled id="picker-btn" title="color" ></button>
+                <button id="clear-btn" title="limpiar" ></button>
+            </nav>
+            <nav class="second-mode none">
+                <button id="normal-mode" ></button>
+                <button id="border-mode" ></button>
+                <button id="fill-mode" ></button>
+            </nav>
+        </aside>
+    
+    <main>
+    <canvas id="canvas"  width="300" height="200"></canvas>
+    </main>
+
+    <footer>
+        <input type="color" name="color" id="color-picker" value="#000000" />
+    </footer>
+</div>
+</body>
+</html>

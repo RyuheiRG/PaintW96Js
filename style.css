@@ -1,0 +1,165 @@
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #222;
+      padding: 16px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #fce300;
+      font-size: 12px;
+      font-weight: 600;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+
+      img {
+        width: 16px;
+        height: auto;
+      }
+    }
+
+    canvas {
+      background: #fff;
+    }
+
+    header {
+      grid-area: header;
+      background: silver;
+      padding: 2px;
+
+      button {
+        border: 0;
+        background: transparent;
+
+        &:hover {
+          box-shadow:
+            1px 1px black,
+            inset -1px -1px gray,
+            inset 1px 1px white;
+        }
+      }
+    }
+
+    main {
+      grid-area: main;
+      padding: 16px;
+    }
+
+    footer {
+      grid-area: footer;
+      background: silver;
+      padding: 4px;
+    }
+
+    #container {
+      border: 1px solid #808080;
+      display: grid;
+      grid-template-areas:
+        "header header header"
+        "aside main main"
+        "footer footer footer";
+    }
+
+    aside {
+      background: silver;
+      grid-area: aside;
+      width: 52px;
+      padding-top: 2px;
+
+      .selection-mode {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1px;
+        justify-content: center;
+      }
+
+      .second-mode {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin: 3px;
+        gap: 2px;
+        justify-content: center;
+        align-items: center;
+        border: 1.5px solid #000000;
+        border-right-color: #ffffff;
+        border-bottom-color: #ffffff;
+
+        & button {
+          background: #d3d3d3 no-repeat center;
+          border: none;
+        }
+
+        & button:active {
+          background: blue no-repeat center;
+        }
+      }
+
+      button {
+        width: 24px;
+        height: 24px;
+
+        background: #bdbdbd url('./assets/icons/draw.png') no-repeat center;
+
+        border: 1.5px solid #eee;
+        border-right-color: #000;
+        border-bottom-color: #000;
+
+        image-rendering: pixelated;
+
+        &.active {
+          background-color: #eee;
+          border-color: #000;
+          border-right-color: #eee;
+          border-bottom-color: #eee;
+        }
+
+        &[disabled] {
+          pointer-events: none;
+          opacity: .5;
+        }
+      }
+    }
+
+    #erase-btn {
+      background-image: url('./assets/icons/erase\ \(1\).png');
+    }
+
+    #rectangle-btn {
+      background-image: url('./assets/icons/rectangle.png');
+    }
+
+    #ellipse-btn {
+      background-image: url('./assets/icons/ellipse.png');
+    }
+
+    #picker-btn {
+      background-image: url('./assets/icons/picker\ \(1\).png');
+    }
+
+    #clear-btn {
+      background-image: url('./assets/icons/trash.png');
+      background-size: 18px;
+    }
+
+    #normal-mode {
+      background-image: url('./assets/icons/rectangle.png');
+    }
+
+    #border-mode {
+      background-image: url('./assets/icons/rectangle-border.png');
+    }
+
+    #fill-mode {
+      background-image: url('./assets//icons/rectangle-fill.png');
+    }
